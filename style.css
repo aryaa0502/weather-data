@@ -184,9 +184,6 @@ p.wind {
 }
 
 @media (min-width: 319px) and (max-width: 480px) {
-    body {
-        background-repeat: repeat-y;
-    }
     .weather {
         flex-direction: column;
         align-items: center;
