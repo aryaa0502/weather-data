@@ -10,13 +10,19 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link href="./style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styles.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -39,16 +45,15 @@
       </button>
     </div>
     <div class="weather loading">
-      <div class="flexone">
-        <div class="loc_date_time">
-          <div class="loc">
+        <div class="loc_date_time_card card">
+          <div class="loc"> 
             <svg
               stroke="currentColor"
               fill="none"
               stroke-width="0"
               viewBox="0 0 24 24"
-              height="5em"
-              width="5em"
+              height="4em"
+              width="4em"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -70,13 +75,14 @@
             <h1 class="country">IN</h1>
           </div>
 
-          <p class="month-date">March 27<br /></p>
+          <p class="month-date">March 27</p>
 
-          <p class="day-time"><br />Monday<br />13:05</p>
+          <p class="day-time">Monday, 13:05</p>
         </div>
 
-        <div class="sunrise_sunset_card">
-          <div class="sunrise_block">
+        <div class="sunrise_sunset_card card">
+          <div>
+          <div class="sunrise_sunset_block">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -94,7 +100,7 @@
             <p class="sunrise">Sunrise: 04:58:05</p>
           </div>
 
-          <div class="sunset_block">
+          <div class="sunrise_sunset_block">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -112,25 +118,27 @@
             <p class="sunset">Sunset: 18:42:09</p>
           </div>
         </div>
-
-        <div class="temp_card">
-          <h1 class="temp">51°C</h1>
-
-        <p class="feelslike">Feels like 55°C</p>
         </div>
 
-        <div class="desc_card">
+        <div class="temp_card card">
+          <div>
+          <h1 class="temp">51°C</h1>
+          <p class="feelslike">Feels like 55°C</p>
+        </div>
+        </div>
 
+        <div class="desc_card card">
           <div class="desc">
-            <img src="" alt="" class="icon" />
+            <img src="" alt="" class="icon"height="150px" width="150px" />
             <p class="description">Cloudy</p>
           </div>
-          
+
+          <div class="desc_p">
           <p class="humidity">Humidity: 60%</p>
-  
+
           <p class="wind">Wind Speed: 6.2 km/h</p>
         </div>
-      </div>
+        </div>
     </div>
     <script src="script.js"></script>
   </body>
