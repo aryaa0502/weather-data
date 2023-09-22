@@ -1,189 +1,232 @@
 body {
-    width: 100%;
+  /* width: 100%;
     height: 100%;
     padding: 0;
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #222;
-    background-image: url("a.jpg"); 
-    /* backup bg img for body when img from unsplash can't load */
-    background-attachment: fixed;
-    background-size: cover;
+    margin: 0; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #222;
+  background-image: url("a.jpg");
+  /* backup bg img for body when img from unsplash can't load */
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.search{
-    height: 15vh;
-    position: absolute;
+/**************************SEARCH*******************************/
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  height: 15vh;
+  /* width: 350px; */
+  /* position: absolute;
     top: -25px;
-    left: 610px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 610px; */
 }
 
-input.search-bar{
-    border: none;
-    outline: none;
-    padding: 1em 1.5em;
-    /* width: calc(100% - 100px); */
-    width: 320px;
-    border-radius: 24px;
-    background-color: #1a1818d0;
-    color: white;
-    font-family: inherit;
-    font-size: 105%;
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.8em 1.5em;
+  /* width: calc(100% - 100px); */
+  width: 300px;
+  border-radius: 24px;
+  background-color: #1a1818d0;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
 }
 
-button{
-    margin: 0 0.5em;
-    border-radius: 50%;
-    border: none;
-    height: 55px;
-    width: 55px;
-    outline: none;
-    background-color: #1a1818d0;
-    color: white;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
+button {
+  margin: 0 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 50px;
+  width: 50px;
+  outline: none;
+  background-color: #1a1818d0;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
-button:hover{
-    background-color: #090909df;
+button:hover {
+  background-color: #090909df;
+}
+/**************************SEARCH*******************************/
+
+/**************************WEATHER*******************************/
+.weather {
+  display: flex;
+  justify-content: space-evenly;
+  height: 80vh;
+  align-items: flex-end;
+  gap: 5px;
+
+  /* background-color: #000000b6; */
 }
 
-.loc h1 {
-    font-family: 'Poppins', sans-serif;    font-size: 50px;
+.card {
+  flex: 1;
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  background: #0c0c0cc9;
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 30px;
+  width: 350px;
+  height: 200px;
 }
 
-h1.temp{
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 100px;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-p.feelslike {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 20px;
-    margin-top: 0;
-    margin-left: 10px;
-}
-
-.desc_card p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 20px;
-}
-
-.flexone {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    width: 97.2%;
-    height: 40%;
-    bottom: 0;
-    background-color: #000000b6;
-    color:aliceblue;
-    padding: 1.5em;
+/****************LOCATION, DATE, TIME********************/
+.loc_date_time_card {
+  flex-direction: column;
 }
 
 .loc {
-    display: flex;
-    align-items: center;
-    margin-top: 50px;
+  display: flex;
+  align-items: center;
+  height: 10vh;
 }
 
-.loc_date_time {
-    flex-direction: column;
-    justify-content: first baseline;
+.loc h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
 }
 
 .loc_date_time p {
-    margin: 0 0 10px 78px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
 }
-
-.sunrise_block {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.sunset_block {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.sunrise {
-    margin-top: 35px;
-}
-
-.sunset {
-    margin-top: 20px;
-}
+/****************LOCATION, DATE, TIME********************/
 
 .sunrise_sunset_card {
-    display: flex;
-    align-content: space-around;
-    flex-wrap: wrap;
-  background: #2d2b2b8a;
-  color: white;
-  padding: 2em;
-  border-radius: 30px;
-  width: 350px;
-}
-
-.temp_card {
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-  background: #2d2b2b8a;
-  color: white;
-  padding: 2em;
-  border-radius: 30px;
-  width: 350px;
-}
-
-.desc_card {
-    display: flex;
     flex-direction: column;
-  background: #2d2b2b8a;
-  color: white;
-  padding: 2em;
-  border-radius: 30px;
-  width: 350px;
 }
-p.humidity, p.wind {
-    margin-left: 25px;
+
+.sunrise_sunset_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 10vh;
 }
 
 .sunrise_sunset_card p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 25px;
+  flex-direction: column;
+}
+
+/*****************SUNRISE SUNSET***********************/
+
+/*****************TEMP, FEELS LIKE***********************/
+
+.temp_card {
+    flex-direction: column;
+}
+
+h1.temp {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+p.feelslike {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+}
+
+/*****************TEMP, FEELS LIKE***********************/
+
+/*****************DESCRIPTION CARD***********************/
+
+.desc_card {
+  flex-direction: column;
 }
 
 .desc {
-    display: flex;
-    align-items: center;
+  display: flex;
+  height: 10vh;
+  align-items: center;
+  text-transform: capitalize;
 }
 
 .description {
-    text-transform: capitalize;
-    margin-left: 8px;
+  margin-left: 8px;
 }
 
+.desc_card p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+}
+
+p.humidity,
+p.wind {
+  margin-left: 25px;
+}
+
+/*****************DESCRIPTION CARD***********************/
+
 .weather.loading {
-    visibility: hidden;
-    max-height: 20px;
-    position: relative;
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
 }
 
 .weather.loading:after {
-    visibility: visible;
-    content: "Loading...";
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 20px;
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
 }
+@media (min-width: 319px) and (max-width: 480px) {
+    .weather {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        /* padding: 100px; */
+      }
+      .card {
+        width: 100px;
+        min-width:max-content;
+      }
+      input.search-bar {
+        width: 80px;
+      }
+      
+      button {
+        height: 20px;
+        width: 20px;
+      }
+  }
+  @media (min-width: 481px) and (max-width: 1200px) {
+    .weather {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        /* padding: 100px; */
+      }
+      .card {
+        width: 300px;
+        min-width:max-content;
+      }
+      input.search-bar {
+        width: 250px;
+      }
+      
+      button {
+        height: 50px;
+        width: 50px;
+      }
+  }
+ 
